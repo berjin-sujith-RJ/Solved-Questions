@@ -1,0 +1,25 @@
+// Best time to buy and sell stocks
+
+
+class Solution {
+    public int maxProfit(int[] prices) {
+        int minnumber = Integer.MAX_VALUE;
+        int maxnumber = 0;
+        for(int i=0; i<prices.length; i++)
+        {
+            if(prices[i] < minnumber)
+            {
+                minnumber = prices[i];
+            }
+            else
+            {
+                int profit = prices[i] - minnumber;
+                if(profit > maxnumber)
+                {
+                    maxnumber = profit;
+                }
+            }
+        }
+        return maxnumber;
+    }
+}
