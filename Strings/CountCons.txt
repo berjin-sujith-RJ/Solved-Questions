@@ -1,0 +1,22 @@
+class Main {
+    public static void main(String[] args) {
+       String word = "programming";
+        System.out.println(countCons(word));
+    }
+
+    public static int countCons(String str)
+    {
+        int count = 0;
+        char[] ch = str.toCharArray();
+        for(int i=0; i<ch.length; i++){
+            if(ch[i]=='a' || ch[i]=='e' || ch[i]=='i' || ch[i]=='o' || ch[i]=='u')
+            {
+            }
+            else
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+}
